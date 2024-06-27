@@ -7,9 +7,11 @@
     <div class="card-header bg-white">
         <h4 class="my-auto d-flex justify-content-between">
             Detail Transaksi
+            <?php if($transaksi->stts_trx !== "pesanan selesai") { ?>
             <a href="{{ route('transaksi.update', ['id' => $transaksi->id_trx]) }}" class="btn btn-sm btn-primary text-capitalize">
                 {{ $transaksi->stts_trx }}
             </a>
+            <?php } ?>
         </h4>
     </div>
     <div class="card-body">
